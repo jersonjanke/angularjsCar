@@ -1,6 +1,6 @@
 import angular from 'angular';
 
-function fleetsController(FleetsService, toastr, $scope) {
+function fleetsController(FleetsService, toastr, $scope, $filter) {
     var vm = this;        
     
     /**
@@ -10,12 +10,14 @@ function fleetsController(FleetsService, toastr, $scope) {
     vm.fuel = FleetsService.getFuel();
     vm.marks = FleetsService.getCarMarks();    
     vm.cars = [];
+    vm.isFiltered = false;
 
     /**
      * Métodos
      */
     vm.save = save;  
     vm.remove = remove;  
+    vm.getSearch = getSearch;
     vm.checkAll = checkAll;
     vm.getCarsSeleted = getCarsSeleted;        
 
@@ -41,6 +43,27 @@ function fleetsController(FleetsService, toastr, $scope) {
             }
         });
         vm.model = newModel;
+    }
+
+    function getSearch(search) {        
+        if(!vm.isFiltered) {
+            vm.modelBkp = vm.model;
+        }
+        if(search) {
+            vm.model = $filter('filter')(vm.model, function(item) {            
+                if(angular.uppercase(item.marca) === angular.uppercase(search)) {
+                    return item;
+                }
+
+                if(angular.uppercase(item.combustivel) === angular.uppercase(search)) {
+                    return item;
+                }
+                vm.isFiltered = true;
+            });
+        }
+        if(!search && vm.isFiltered) {
+            vm.model = vm.modelBkp;
+        }
     }
 
     function checkAll(model, all) {        

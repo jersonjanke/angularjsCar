@@ -5,9 +5,9 @@
     </div>    
     <div class="col-lg-4 margin-bottom-20">
         <div class="input-group">            
-            <input type="text" class="form-control" placeholder="Pesquisar">
+            <input type="text" class="form-control" ng-model="vm.search" placeholder="Pesquisar">
             <span class="input-group-btn">
-                <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+                <button class="btn btn-default" ng-click="vm.getSearch(vm.search)" type="button"><i class="fa fa-search"></i></button>
             </span>
         </div>
     </div>       

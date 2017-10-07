@@ -9,7 +9,7 @@ function FleetsService() {
     services.getFuel = getFuel;
 
     function getFuel() {
-        return ['Gasolina', 'Etanol', 'GNV', 'Diesel'];
+        return ['Gasolina', 'Etanol', 'GNV', 'Diesel', 'Flex'];
     }
 
     function getCar() {
