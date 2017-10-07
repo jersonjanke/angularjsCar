@@ -1,7 +1,7 @@
 import angular from 'angular';
 import header from './components/header/component';
-import modules from './modules/config/module';
-import core from './core/module';
+import modules from './modules/fleets/config/module';
+import core from './modules/core/module';
 import scss from './assets/main.scss';
 
 var app = angular.module('app', [

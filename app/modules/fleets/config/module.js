@@ -1,7 +1,7 @@
 import angular from 'angular';
 import routes from './route';
-import FleetsCtrl from '../fleets/fleets.controller';
-import FleetsService from '../fleets/fleets.service';
+import FleetsCtrl from '../fleets.controller';
+import FleetsService from '../fleets.service';
 
 const exports = { name: 'modules' };
 

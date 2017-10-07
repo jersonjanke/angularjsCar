@@ -1,5 +1,5 @@
-import fleetsHtml from '../fleets/fleets.html';
-import fleetsController from '../fleets/fleets.controller';
+import fleetsHtml from '../fleets.html';
+import fleetsController from '../fleets.controller';
 
 function routes($stateProvider) {
 
