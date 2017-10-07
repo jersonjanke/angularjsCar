@@ -43,7 +43,9 @@
         </div>
 
         <div class="list-body">
-            <div class="list-row" ng-repeat="item in vm.model">
+            <div class="list-row" dir-paginate="item in vm.model | filter:q | itemsPerPage: vm.pageSize" 
+                                  current-page="vm.currentPage" 
+                                  pagination-id="fleetsPagination">
                 <div class="row">                    
                     <div class="col-md-2">                        
                         <div class="row">
@@ -73,6 +75,15 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="text-center">
+                <dir-pagination-controls boundary-links="true" 
+                                        on-page-change="vm.pageChangeHandler(newPageNumber)" 
+                                        pagination-id="fleetsPagination" 
+                                        template-url="assets/pagination/dirPagination.html">
+                </dir-pagination-controls>
         </div>
     </div>
 </div>
@@ -153,4 +164,4 @@
       </div>
     </div>    
   </div>
-</div>
+</div>  

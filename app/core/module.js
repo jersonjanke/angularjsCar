@@ -8,13 +8,15 @@ import uiMask from 'angular-ui-mask';
 
 const exports = {name: 'core'};
 
+
 angular.module(exports.name, [
     uirouter,  
     sanitize,
     select,  
     animate,
     toastr,
-    uiMask
+    uiMask,
+    'angularUtils.directives.dirPagination'
 ]);
 
 export default exports;

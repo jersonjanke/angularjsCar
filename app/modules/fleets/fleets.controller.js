@@ -12,6 +12,25 @@ function fleetsController(FleetsService, toastr, $scope, $filter) {
     vm.cars = [];
     vm.isFiltered = false;
 
+
+    vm.currentPage = 1;
+    vm.pageSize = 5;
+    vm.meals = [];
+
+    vm.drinks = [
+        'coke',
+        'melange',
+        'chai latte',
+        'almdudler',
+        'beer',
+        'vodka',
+        'coconut milk',
+        'orange juice',
+        'wine',
+        'whisky',
+        'sex on the beach'
+      ];
+
     /**
      * Métodos
      */
@@ -20,6 +39,7 @@ function fleetsController(FleetsService, toastr, $scope, $filter) {
     vm.getSearch = getSearch;
     vm.checkAll = checkAll;
     vm.getCarsSeleted = getCarsSeleted;        
+    vm.pageChangeHandler = pageChangeHandler;
 
     /**
      * Salva dados no array da lista 
@@ -88,6 +108,10 @@ function fleetsController(FleetsService, toastr, $scope, $filter) {
             }
         });
     }
+
+    function pageChangeHandler(num) {
+        console.log('drinks page changed to ' + num);
+    };
 }
 
 export default fleetsController;

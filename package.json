@@ -19,7 +19,7 @@
     "angular-sanitize": "^1.6.6",
     "angular-toastr": "^2.1.1",
     "angular-ui-mask": "^1.8.7",
-    "angular-ui-router": "1.0.0-beta.1",
+    "angular-ui-router": "1.0.0-beta.1",   
     "express": "^4.15.4",
     "firebase": "^2.4.0",
     "geoip-lite": "^1.2.1",
@@ -64,7 +64,7 @@
   "scripts": {
     "pretest": "webdriver-manager update",
     "test": "protractor ./test/protractor.conf.js",
-    "test-server": "http-server dist -p 9000 -a localhost",    
+    "test-server": "http-server dist -p 9000 -a localhost",
     "start": "webpack-dev-server --config webpack.config.dev.babel.js --port 9000 --inline --hot",
     "build": "webpack --config webpack.config.prod.babel.js --progress"
   }
