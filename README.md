@@ -1,35 +1,35 @@
 # Angular Car
 
 - AngularJs
-- ES6
+- Javascript(ES6)
 - Babel
 - Webpack
 - SASS
 
-## Clone
+###### Clone
 ```
 git clone https://github.com/jersonjanke/angularjsCar.git
 ```
-## Diretório
+###### Diretório
 ```
 cd angularjsCar
 ```
-## Instalar dependâncias 
+###### Instalar dependâncias 
 ```
 npm install
 ```
 
-## Start server 
+###### Start server 
 ```
 npm start
 ```
 
-## Gerar build do projeto
+###### Gerar build do projeto
 ```
 npm run build
 ```
 
-## Start server a partir do build
+###### Start server a partir do build
 ```
 npm run test-server
 ```
