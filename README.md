@@ -5,6 +5,7 @@
 - Babel
 - Webpack
 - SASS
+- John Papa
 
 ###### Clone
 ```
